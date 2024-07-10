@@ -16,14 +16,24 @@ print(number_cont_three)
 # Count the number of spaces in a string
 sample_str = "Hello there friendly peeps!"
 number_of_spaces = len([k for k in sample_str if ' ' in k])
-# kind of feels long winded compared to .spplit()
+# kind of feels long winded compared to .split()
 print(number_of_spaces)
 # 3
 
 alt_number_number_of_spaces = len(sample_str.split()) - 1
 print(alt_number_number_of_spaces)
-# 
+# 3
 
 # Remove all of the vowels in a string
+sample_str_b = "Hello World! Oh, Hi!"
+vowels = ['a', 'e', 'i', 'o', 'u']
+no_vowels = [x for x in sample_str_b.lower() if x not in vowels]
+print(''.join(no_vowels))
+# Hll Wrld! h, H!
 
 # Find all of the words in a string that are less than 4 letters
+sample_str_c = "I went to the marketplace to purchase some new sneakers and a hat"
+strings_shorter_than_four = [y for y in sample_str_c.split() if len(y) < 4]
+print(strings_shorter_than_four)
+# doesn't really clarify datatype of output, so will leave as list
+# ['I', 'to', 'the', 'to', 'new', 'and', 'a', 'hat']
